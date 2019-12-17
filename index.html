@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Happy Birthday</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/birthday.css" />
+</head>
+
+<body>
+    <canvas id="myCanvas" style="display: none;"></canvas>
+    <canvas id="can" style="display: none;"></canvas>
+
+    <h1 id="wish">
+        Make a wish..<br />.. and blow out the candle <br /> (tap the flame)
+    </h1>
+    <h1 id="wish1" style="display: none;">
+        I hope that you may live to enjoy many more birthdays, spreding love to all around you and enjoying a life full of success <b> Cheers to more life.</b> 
+    </h1>
+    <h1 id="username"></h1>
+
+    <div id="glow" class="glow"></div>
+    <div id="candle">
+        <div class="stripe"></div>
+        <div class="stripe"></div>
+        <div class="stripe"></div>
+        <div class="stripe"></div>
+        <div class="stripe"></div>
+        <div id="top">
+            <div class="smoke"></div>
+            <div class="smoke"></div>
+            <div class="smoke"></div>
+            <div id="knot"></div>
+            <div id="flame" class="burn"></div>
+        </div>
+    </div>
+    <script>
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+
+        var name = getParameterByName('name');
+
+        document.getElementById('username').innerHTML = "Happy Birthday " + "Faith Mutanu";
+    </script>
+    <script src="js/script.js"></script>
+<!--    <script src="js/weirdCombined.js"></script>-->
+<!--    <script src="js/birthday.js"></script>-->
+    <script src="js/heart.js"></script>
+
+</body>
+
+</html>
